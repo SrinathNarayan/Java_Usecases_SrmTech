@@ -14,7 +14,7 @@ public class FruitsOperation {
 	}
 	void findByDis(ArrayList<FruitsInfo> al,String distName)
 	{
-		System.out.println(" Distibuted Name Searched");
+		System.out.println(" Distibutor  Name Searched");
 		for(FruitsInfo f:al)
 		{
 			if(f.Distributor.equals(distName))

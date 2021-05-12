@@ -1,14 +1,16 @@
 package lab1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class FirstNonRepeatable {
+	static Logger log = Logger.getLogger(FirstNonRepeatable.class.getName());
 	public static void main(String[] args) {
 		  String str1 ;
 		  Scanner sc = new Scanner(System.in);
-	      System.out.println("Enter the String :");
+	    log.info("Enter the String :");
 	       str1 = sc.nextLine();
-		  System.out.println("The given string is: " + str1);
+		log.info("The given string is: " + str1);
 		  for (int i = 0; i < str1.length(); i++) {
 		   boolean unique = true;
 		   for (int j = 0; j < str1.length(); j++) {
@@ -18,9 +20,9 @@ public class FirstNonRepeatable {
 		    }
 		   }
 		   if (unique) {
-		    System.out.println("The first non repeated character in String is: " + str1.charAt(i));
+		  log.info("The first non repeated character in String is: " + str1.charAt(i));
 		    break;
 		   }
-		  }
+		  }sc.close();
 		 }
 }

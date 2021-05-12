@@ -1,12 +1,15 @@
 package AirProcess;
 
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 
 public class ViewAllRecords {
+	static Logger log = Logger.getLogger(ViewAllRecords.class.getName());
 	static ArrayList<CustomerDetails> custList = new ArrayList<CustomerDetails>();	
 	FilterOpertaion f = new FilterOpertaion();
 	Scanner sc = new Scanner(System.in);
@@ -35,14 +38,14 @@ public ArrayList<CustomerDetails> allrecords(){
 	void display()
 	
 	{
-		System.out.println("\t\t\t\t\t Customer Compelete History");
-		System.out.println("-----------------------------------------------------------------------------------------------------------------");
-		Iterator itr = allrecords().iterator();
+		log.info("\t\t\t\t\t Customer Compelete History");
+		log.info("-----------------------------------------------------------------------------------------------------------------");
+		Iterator<CustomerDetails> itr = allrecords().iterator();
 		
 		while(itr.hasNext())
 		{
-			System.out.println(itr.next());
+			log.info( "" +itr.next());
 		}
-		System.out.println("-----------------------------------------------------------------------------------------------------------------");
+		log.info("-----------------------------------------------------------------------------------------------------------------");
 	}
 }

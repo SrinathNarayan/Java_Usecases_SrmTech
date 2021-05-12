@@ -1,8 +1,10 @@
 package lab2;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Occurencecount {
+	static Logger log = Logger.getLogger(Occurencecount.class.getName());
 	static void countEachChar(String str) 
 	   { 
 		
@@ -24,7 +26,7 @@ public class Occurencecount {
 		   } 
 
 		   if (flag == 1)  
-		      System.out.println("Occurrence of char " + str.charAt(i)
+		     log.info("Occurrence of char " + str.charAt(i)
 			 + " in the String is:" + counter[str.charAt(i)]);             
 		} 
 	   } 
@@ -33,10 +35,11 @@ public class Occurencecount {
 		   
 		String str ; 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the string");
+		log.info("Enter the string");
 		str = sc.nextLine();
 			
 		countEachChar(str); 
-	   }
+		sc.close();
+	 }
 
 }

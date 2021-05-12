@@ -1,29 +1,29 @@
 package lab2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.logging.Logger;
+
 
 public class StringArrayToArrayList {
+	static Logger log = Logger.getLogger(StringArrayToArrayList.class.getName());
 	public static void main(String[] args) {
 
 		
-		ArrayList<String> friendsnames= new ArrayList<String>();
+		ArrayList<String> friendsnames= new ArrayList<>();
 		friendsnames.add("Ankur");
 		friendsnames.add("Ajeet");
 		friendsnames.add("Harsh");
 		friendsnames.add("John");
-		System.out.println("Before Conversion");
-        System.out.println(friendsnames);
-        System.out.println("===========================");
+		log.info("Before Conversion");
+        log.info( ""+friendsnames);
+        log.info("===========================");
 		/*ArrayList to Array Conversion */
 		String frnames[]=friendsnames.toArray(new String[friendsnames.size()]);
-		System.out.println("After Conversion");
+		log.info("After Conversion");
 		/*Displaying Array elements*/
 		for(String k: frnames)
 		{
-			System.out.println(k);
+			log.info(k);
 		}
 	}
 }

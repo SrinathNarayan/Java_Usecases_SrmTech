@@ -1,13 +1,14 @@
 package lab1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class PrimeorNot {
-
+	static Logger log = Logger.getLogger(PrimeorNot.class.getName());
 	public static void main(String[] args) {
 		int num = 0;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number");
+		log.info("Enter the number");
 		num= sc. nextInt();
 		
 		
@@ -21,11 +22,11 @@ public class PrimeorNot {
 	    }
 
 	    if (!isprime)
-	      System.out.println( "Given Number "+num + " is a  prime number.");
+	     log.info( "Given Number "+num + " is a  prime number.");
 	    else {
-	      System.out.println("Given Number "+num + " is not a prime number.");
+	     log.info("Given Number "+num + " is not a prime number.");
 	  }
-
+sc.close();
 	}
 	}
 

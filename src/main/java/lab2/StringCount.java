@@ -1,12 +1,14 @@
 package lab2;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class StringCount {
+	static Logger log = Logger.getLogger(StringCount.class.getName());
 	  public static void main(String[] args) {    
 		  Scanner a = new Scanner(System.in);
 	        String sentence = a.nextLine();
-	        System.out.println("Number of words in string is: " + count(sentence));
+	       log.info("Number of words in string is: " +count(sentence));
 	        a.close();
 	    }
 

@@ -1,30 +1,32 @@
 package lab2;
 
 import java.util.HashMap;
+import java.util.logging.Logger;
 
 public class RemovingKeyValueInhashmap {
+	static Logger log = Logger.getLogger(RemovingKeyValueInhashmap.class.getName());
 	public static void main(String[] args) {
         
 	   
-	    HashMap<Integer, String> hash_map = new HashMap<Integer, String>();
+	    HashMap<Integer, String> hashmap = new HashMap<>();
 	  
 	   
-	    hash_map.put(10, "Ram");
-	    hash_map.put(15, "Sham");
-	    hash_map.put(20, "Ravi");
-	    hash_map.put(25, "Latta");
-	    hash_map.put(30, "Sun");
+	    hashmap.put(10, "Ram");
+	    hashmap.put(15, "Sham");
+	    hashmap.put(20, "Ravi");
+	    hashmap.put(25, "Latta");
+	    hashmap.put(30, "Sun");
 	  
 	    
-	    System.out.println("Initial Mappings are: " + hash_map); 
+	   log.info("Initial Mappings are: " + hashmap); 
 	  
 	    
-	    String returned_value = (String)hash_map.remove(20);
+	    String returnedvalue = (String)hashmap.remove(20);
 	  
 	  
-	    System.out.println("Returned value is: "+ returned_value);
+	   log.info("Returned value is: "+ returnedvalue);
 	  
 	    
-	    System.out.println("New map is: "+ hash_map);
+	   log.info("New map is: "+ hashmap);
 	}
 }

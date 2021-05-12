@@ -3,7 +3,7 @@ package AbcFruitShop;
 public class FruitsInfo extends BaseModel {
 	String fruitName;
 	String fruitType;
-	String Distributor;
+	String distributor;
 	double fruitWeight;
 	String fruitCategory;
 	String location;
@@ -18,7 +18,7 @@ public FruitsInfo(String fruitName, String fruitType, String distributor, double
 	super();
 	this.fruitName = fruitName;
 	this.fruitType = fruitType;
-	this.Distributor = distributor;
+	this.distributor = distributor;
 	this.fruitWeight = fruitWeight;
 	this.fruitCategory = fruitCategory;
 	this.location = location;
@@ -31,7 +31,7 @@ public FruitsInfo(String fruitName, String fruitType, String distributor, double
 
 @Override
 public String toString() {
-	return "Fruitdetails [fruitName=" + fruitName + ", fruitType=" + fruitType + ", Distributor=" + Distributor
+	return "Fruitdetails [fruitName=" + fruitName + ", fruitType=" + fruitType + ", Distributor=" + distributor
 			+ ", fruitWeight=" + fruitWeight + ", fruitCategory=" + fruitCategory + ", location=" + location
 			+ ", expiryDate=" + expiryDate + ", quantity=" + quantity + ", cost=" + cost + ", totalcost=" + totalcost
 			+ "]";

@@ -1,11 +1,14 @@
 package AbcFruitShop;
 
+import java.util.logging.Logger;
+
 public class GroceryInfo extends BaseModel {
-	String GroceryName;
-	String GroceryType;
-	String Distributor;
-	double GroceryWeight;
-	String GroceryCategory;
+	static Logger log = Logger.getLogger(GroceryInfo.class.getName());
+	String groceryName;
+	String groceryType;
+	String distributor;
+	double groceryWeight;
+	String groceryCategory;
 	String location;
 	String expiryDate;
 	int quantity;
@@ -14,11 +17,11 @@ public class GroceryInfo extends BaseModel {
 	public GroceryInfo(String groceryName, String groceryType, String distributor, double groceryWeight,
 			String groceryCategory, String location, String expiryDate, int quantity, double cost, double totalcost) {
 		super();
-		GroceryName = groceryName;
-		GroceryType = groceryType;
-		Distributor = distributor;
-		GroceryWeight = groceryWeight;
-		GroceryCategory = groceryCategory;
+		this.groceryName = groceryName;
+		this.groceryType = groceryType;
+		this.distributor = distributor;
+		this.groceryWeight = groceryWeight;
+		this.groceryCategory = groceryCategory;
 		this.location = location;
 		this.expiryDate = expiryDate;
 		this.quantity = quantity;
@@ -38,20 +41,20 @@ public class GroceryInfo extends BaseModel {
 	case "oil":cost=160;
 	totalcost=quantity*cost;
 	break;
-	case "snacks":cost=50;
+	case "snacks":cost=60;
 	totalcost=quantity*cost;
 	break;
 	case "beverage":cost=75;
 	totalcost=quantity*cost;
 	break;
-	default:System.out.println("Grocery not available");
+	default: log.info("Grocery not available");
 	}
 	return totalcost;
 	}
 	@Override
 	public String toString() {
-		return "Grocerydetails [GroceryName=" + GroceryName + ", GroceryType=" + GroceryType + ", Distributor="
-				+ Distributor + ", GroceryWeight=" + GroceryWeight + ", GroceryCategory=" + GroceryCategory
+		return "Grocerydetails [GroceryName=" + groceryName + ", GroceryType=" + groceryType + ", Distributor="
+				+ distributor + ", GroceryWeight=" + groceryWeight + ", GroceryCategory=" + groceryCategory
 				+ ", location=" + location + ", expiryDate=" + expiryDate + ", quantity=" + quantity + ", cost=" + cost
 				+ ", totalcost=" + totalcost + "]";
 	}

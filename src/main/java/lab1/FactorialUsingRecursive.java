@@ -1,8 +1,10 @@
 package lab1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class FactorialUsingRecursive {
+	static Logger log = Logger.getLogger(FactorialUsingRecursive.class.getName());
 	public static long factorial(int i) {
 	      if(i <= 1) {
 	         return 1;
@@ -11,9 +13,10 @@ public class FactorialUsingRecursive {
 	   }
 	   public static void main(String args[]) {
 	      Scanner sc = new Scanner(System.in);
-	      System.out.println("Enter the number");
+	     log.info("Enter the number");
 	      int i = sc.nextInt();
-	      System.out.println("Factorial of the given number is ::"+ factorial(i));
-	   }
+	      log.info("Factorial of the given number is ::"+ factorial(i));
+		  sc.close();
+			   }
 
 }

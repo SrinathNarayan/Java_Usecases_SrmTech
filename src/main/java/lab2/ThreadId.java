@@ -1,7 +1,10 @@
 package lab2;
 
+import java.util.logging.Logger;
+
 public class ThreadId {
-	public static void main(String args[]) 
+    static Logger log = Logger.getLogger(ThreadId.class.getName());
+    public static void main(String[] args) 
     {
         Thread thread1 = new Thread();
         Thread thread2 = new Thread();
@@ -11,18 +14,18 @@ public class ThreadId {
         thread3.start();
         try {
             for (int i = 0; i < 5; i++) {
-                System.out.println(i);
+               log.info(""+i);
                 Thread.sleep(500);
             }
         }catch(Exception e) {
-            System.out.println(e);
+           log.info(""+e);
         }
         // get current thread id
         long id = thread1.getId();
-        System.out.println("Thread1 id : "+id);
+       log.info("Thread1 id : "+id);
         id = thread2.getId();
-        System.out.println("Thread2 id : "+id);
+       log.info("Thread2 id : "+id);
         id = thread3.getId();
-        System.out.println("Thread3 id : "+id);
+       log.info("Thread3 id : "+id);
     }
 }

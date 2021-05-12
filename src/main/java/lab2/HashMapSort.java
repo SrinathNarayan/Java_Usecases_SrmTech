@@ -1,5 +1,4 @@
 package lab2;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -7,12 +6,15 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.logging.Logger;
 
 public class HashMapSort {
+	static Logger log = Logger.getLogger(HashMapSort.class.getName());
 	 public static void main(String[] args) {
-	        HashMap<String, String> map = new HashMap<String, String>();
-	        LinkedHashMap<String, String> sortedMap = new LinkedHashMap<String, String>();
-	        ArrayList<String> list = new ArrayList<String>();
+	
+	        HashMap<String, String> map = new HashMap<>();
+	        LinkedHashMap<String, String> sortedMap = new LinkedHashMap<>();
+	        ArrayList<String> list = new ArrayList<>();
 	        map.put("1", "Chennai");
 	        map.put("8", "MuMbai");
 	        map.put("4", "Delhi");
@@ -35,7 +37,7 @@ public class HashMapSort {
 	                }
 	            }
 	        }
-	        System.out.println(sortedMap);
+	       log.info(""+ sortedMap);
 	    }
 
 }

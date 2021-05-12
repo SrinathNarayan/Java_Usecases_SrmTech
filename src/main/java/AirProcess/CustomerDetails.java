@@ -1,16 +1,16 @@
 package AirProcess;
 
 public class CustomerDetails {
-	public Integer customerId;
-	public String customerName;
-	public String baseCountry;
-	public String address;
-	public boolean isActive;
-	public String phoneNumber;
-	public String avlCredits;
-	public String is4g;
-	public Integer billAmount;
-	public String description;
+	protected Integer customerId;
+	protected String customerName;
+	protected String baseCountry;
+	protected String address;
+	protected boolean isActive;
+	protected String phoneNumber;
+	protected String avlCredits;
+	protected String is4g;
+	protected Integer billAmount;
+	protected String description;
 	
 	
 	public CustomerDetails(Integer customerId, String customerName, String baseCountry, String address, 

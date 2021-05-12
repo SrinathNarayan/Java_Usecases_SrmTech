@@ -1,14 +1,16 @@
 package lab1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class String_Palindrome {
+	static Logger log = Logger.getLogger(String_Palindrome.class.getName());
 
 	public static void main(String[] args) {
 
 		Scanner scn = new Scanner(System.in);
 
-		System.out.print("Enter a string: ");
+		log.info("Enter a string: ");
 
 		String str = scn.nextLine();
 
@@ -29,10 +31,10 @@ public class String_Palindrome {
 
 		if (str.equals(revStr)) {
 
-			System.out.println(str + " IS A PALINDROME STRING");
+			log.info(str + " IS A PALINDROME STRING");
 		} else {
 
-			System.out.println(str + " IS A NOT PALINDROME STRING");
-		}
+			log.info(str + " IS A NOT PALINDROME STRING");
+		}scn.close();
 	}
 }

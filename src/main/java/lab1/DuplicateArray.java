@@ -2,15 +2,17 @@ package lab1;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class DuplicateArray {
+	static Logger log = Logger.getLogger(DuplicateArray.class.getName());
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-	      System.out.println("Enter the size of the array that is to be created::");
+	     log.info("Enter the size of the array that is to be created::");
 	      int size = sc.nextInt();
 	      int[] myArray = new int[size];
-	      System.out.println("Enter the elements of the array ::");
+	     log.info("Enter the elements of the array ::");
 	      for(int i=0; i<size; i++) {
 	         myArray[i] = sc.nextInt();
 	      }
@@ -25,10 +27,11 @@ public class DuplicateArray {
 	            }
 	        }
 	        uniqueArr[counter] = myArray[myArray.length - 1];
-	        System.out.println("Array with Unique Elements : ");
+	       log.info("Array with Unique Elements : ");
 	        for (int i = 0; i <= counter; i++) {
-	            System.out.println(uniqueArr[i]);
+	           log.info(uniqueArr[i]+ " ");
 	        }
+			sc.close();
 	    }
 
 	}

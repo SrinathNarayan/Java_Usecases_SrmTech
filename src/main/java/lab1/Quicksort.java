@@ -1,28 +1,31 @@
 package lab1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Quicksort {
 	 static int a[]; 
      static int n; 
+     static Logger log = Logger.getLogger(Quicksort.class.getName());
    public static void main(String args[]) 
 { 
      Scanner read=new Scanner(System.in); 
-     System.out.print("Enter Number of Elements You Want to Insert : "); 
+    log.info("Enter Number of Elements You Want to Insert : "); 
      n=read.nextInt(); 
      a=new int[n]; 
      for(int i=0;i<n;i++) 
         { 
-          System.out.print("\nEnter no."+(i+1)+" :"); 
+         log.info("\nEnter no."+(i+1)+" :"); 
           a[i]=read.nextInt(); 
         } 
      Quicksort ii=new Quicksort(); 
           ii.QuickSort(a,0,n-1); 
-          System.out.print("\nAll Elements are :"); 
+         log.info("\nAll Elements are :"); 
           for(int i=0;i<n;i++) 
              { 
-                  System.out.print(a[i]+" "); 
+                 log.info(a[i]+" "); 
              } 
+             read.close();
 } 
    void QuickSort(int a[],int first,int last) 
         { 

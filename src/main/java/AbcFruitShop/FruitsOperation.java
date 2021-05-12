@@ -1,47 +1,49 @@
 package AbcFruitShop;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 
 
 public class FruitsOperation {
-	void getDetails(ArrayList al )
+	static Logger log = Logger.getLogger(FruitsOperation.class.getName());
+	void getDetails(ArrayList<FruitsInfo> al )
 	{
 		for(int i=0;i<al.size();i++)
 		{
-			System.out.println(al.get(i));
+			log.fine(""+al.get(i));
 		}
 	}
 	void findByDis(ArrayList<FruitsInfo> al,String distName)
 	{
-		System.out.println(" Distibutor  Name Searched");
+		log.info(" Distibutor  Name Searched");
 		for(FruitsInfo f:al)
 		{
-			if(f.Distributor.equals(distName))
+			if(f.distributor.equals(distName))
 			{
-				System.out.println(f);
+				log.fine(" "+f);
 			}
 		}
 	}
 	void findByName(ArrayList<FruitsInfo> al,String Name )
 	{
-		System.out.println(" Fruit Name Searched");
+		log.info(" Fruit Name Searched");
 		for(FruitsInfo f1:al)
 		{
 			if(f1.fruitName.equals(Name))
 			{
-				System.out.println(f1);
+				log.fine(" " + f1);
 			}
 		}
 	}
 	void findByloc(ArrayList<FruitsInfo> al,String location)
 	{
-		System.out.println(" Location Searched");
+		log.info(" Location Searched");
 		for(FruitsInfo f2:al)
 		{
 			if(f2.location.equals(location))
 			{
-				System.out.println(f2);
+				log.info(" " + f2);
 			}
 		}
 	}

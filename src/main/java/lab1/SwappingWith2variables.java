@@ -15,7 +15,7 @@ public class SwappingWith2variables {
 		b=a-b;
 		a=a-b;
 		System.out.println("After Swapping"  +" " +"a ="+ " " +a+" "+ "b =" +" " + b);
-
+		sc.close();
 	}
 
 }

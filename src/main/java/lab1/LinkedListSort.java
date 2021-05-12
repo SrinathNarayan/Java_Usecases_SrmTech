@@ -2,11 +2,13 @@ package lab1;
 
 import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.logging.Logger;
 
 public class LinkedListSort {
+    static Logger log = Logger.getLogger(LinkedListSort.class.getName());
 	public static void main(String[] args) 
     {
-        LinkedList<String> listOfNames = new LinkedList<String>();
+        LinkedList<String> listOfNames = new LinkedList<>();
         
         listOfNames.add("D");
         listOfNames.add("A");
@@ -14,9 +16,9 @@ public class LinkedListSort {
         listOfNames.add("Y");
         listOfNames.add("X");
         
-        System.out.println("Before sorting: "+ listOfNames);
+      log.info("Before sorting: "+ listOfNames);
         listOfNames.sort(new MyComparator());
-        System.out.println("After sorting: "+ listOfNames);
+       log.info("After sorting: "+ listOfNames);
     }
 }
 class MyComparator implements Comparator<String>

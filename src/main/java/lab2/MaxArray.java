@@ -1,16 +1,19 @@
 package lab2;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class MaxArray {
+	static Logger log = Logger.getLogger(MaxArray.class.getName());
 	public static void main(String[] args)
 	{
-	int n, max;
+	int n;
+	int max;
 	Scanner s = new Scanner(System.in);
-	System.out.print("Enter the number of elements in the array:");
+	log.info("Enter the number of elements in the array:");
 	n = s.nextInt();
 	int a[] = new int[n];
-	System.out.println("Enter the elements of array:");
+	log.info("Enter the elements of array:");
 	for(int i = 0; i < n; i++)
 	{
 	a[i] = s.nextInt();
@@ -23,7 +26,8 @@ public class MaxArray {
 	max = a[i];
 	}
 	}
-	System.out.println("Maximum value in the array is:"+max);
-	}
+	log.info("Maximum value in the array is:"+max);
+	s.close();
+}
 
 }

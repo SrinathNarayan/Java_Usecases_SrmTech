@@ -1,8 +1,10 @@
 package lab1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class SquareRoot {
+	static Logger log = Logger.getLogger(SquareRoot.class.getName());
 	public static double squareRoot(int number) {
 		double temp;
 
@@ -18,11 +20,11 @@ public class SquareRoot {
 
 	    public static void main(String[] args)  
 	    { 
-		System.out.print("Enter any number:");
+		log.info("Enter any number:");
 		Scanner scanner = new Scanner(System.in);
 		int num = scanner.nextInt(); 
 		scanner.close();
 
-		System.out.println("Square root of "+ num+ " is: "+squareRoot(num));
+		log.info("Square root of "+ num+ " is: "+squareRoot(num));
 	    } 
 }

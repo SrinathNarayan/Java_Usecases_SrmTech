@@ -1,11 +1,13 @@
 package lab2;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class NumberToWords {
+	static Logger log = Logger.getLogger(NumberToWords.class.getName());
 	 public static void main(String args[]){
 	        Scanner sc=new Scanner(System.in);
-	        System.out.println("enter the number");
+log.info("enter the number");
 	        int n=sc.nextInt();
 	        int n1=n,n2=n;
 	        int b=n1%10,a=n2/10; //  n1/10 means last digit is removed and n2%10 means last digit by modulus
@@ -15,12 +17,13 @@ public class NumberToWords {
 	        String[] tens_multiple = new String[]{"","","twenty","thirty","forty","fifty","sixty", "seventy","eighty","ninety"};
 	        if(a==1)
 	        {
-	            System.out.println(two_digits[b+1]);
+	           log.info(two_digits[b+1]);
 	        }
 	        else if(b==0)
-	            System.out.println(tens_multiple[a]);
+	           log.info(tens_multiple[a]);
 	        else
-	            System.out.println(tens_multiple[a]+"-"+single_digits[b]);
-	    }
+	           log.info(tens_multiple[a]+"-"+single_digits[b]);
+				sc.close();
+			 }
 
 }

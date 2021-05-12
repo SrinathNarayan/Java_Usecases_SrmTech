@@ -1,44 +1,44 @@
 package SalesReport;
 
 public class Products {
-	static BeveragesProducts bp;
-	static VegetablesProducts vp;
-	static FoodGrainsProducts fg;
+      static BeveragesProducts bp ;
+      static VegetablesProducts v;
+      static FoodGrainsProducts f;
+ 
 
-	public void Beveragecocoorder() {
-		bp = new BeveragesProducts(36985, 65, 130, 12, 0, "COCOLA");
-
+	public void beveragecocoorder() {
+		bp = new BeveragesProducts(96585, 12, 130, 22,0 , "COCOLA");
 		bp.showcocoladetails();
 	}
 
-	public void Beveragepepsiorder() {
+	public void beveragepepsiorder() {
 		bp = new BeveragesProducts(78952, 35, 145, 12, 0, "PEPSI");
 
 		bp.showPepsidetails();
 	}
 
-	public void VegetablesTomatoProducts() {
-		vp = new VegetablesProducts(89745, 25, 150, 12, 0, "TOMATO");
+	public void vegetablesTomatoProducts() {
+		v = new VegetablesProducts(89745, 25, 150, 12, 0, "TOMATO");
 
-		vp.showtomatodetails();
+		v.showtomatodetails();
 	}
 
-	public void VegetablesPotatoProducts() {
-		vp = new VegetablesProducts(78945, 35, 180, 12, 0, "POTATO");
+	public void vegetablesPotatoProducts() {
+		v = new VegetablesProducts(78945, 35, 180, 12, 0, "POTATO");
 
-		vp.showpotatodetails();
+		v.showpotatodetails();
 	}
 
-	public void FoodGrainsRiceProducts() {
-		fg = new FoodGrainsProducts(98745, 22, 250, 12, 0, "BASMATI");
+	public void foodGrainsRiceProducts() {
+		f = new FoodGrainsProducts(98745, 22, 250, 12, 0, "BASMATI");
 
-		fg.showattadetails();
+		f.showattadetails();
 	}
 
-	public void FoodGrainAttaProducts() {
-		fg = new FoodGrainsProducts(78955, 89, 350, 12, 0, "CHAAKI ATTA");
+	public void foodGrainAttaProducts() {
+		f = new FoodGrainsProducts(78955, 89, 350, 12, 0, "CHAAKI ATTA");
 
-		fg.showricedetails();
+		f.showriceproductdetails();
 	}
 
 	public void cocorate() {
@@ -50,21 +50,21 @@ public class Products {
 	}
 
 	public void ricerate() {
-		fg.riceprice();
+		f.riceprice();
 		
 	}
 
 	public void attarate() {
-		fg.attaprice();
+		f.attaprice();
 		
 	}
 
 	public void tomatorate() {
-		vp.tomatoprice();
+		v.tomatoprice();
 	}
 
 	public void potatorate() {
-		vp.potatoprice();
+		v.potatoprice();
 	}
 
 }

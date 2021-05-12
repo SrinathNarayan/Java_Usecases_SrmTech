@@ -2,12 +2,14 @@ package lab2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.logging.Logger;
 
 public class ArrayListInDescendingOrder {
-	public static void main(String args[])   
+	static Logger log = Logger.getLogger(ArrayListInDescendingOrder.class.getName());
+	public static void main(String[] args)   
 	{   
 	
-	ArrayList<String> list = new ArrayList<String>();   
+	ArrayList<String> list = new ArrayList<>();   
 	  
 	list.add("Data Science");   
 	list.add("Testing");   
@@ -18,11 +20,11 @@ public class ArrayListInDescendingOrder {
 	list.add("Computer Networks");  
 	list.add("Python");  
 	 
-	System.out.println("Before Sorting: "+ list);   
+	log.info("Before Sorting: "+ list);   
 	
 	Collections.sort(list, Collections.reverseOrder());   
 	
-	System.out.println("After Sorting In Descending Order: "+ list);   
+	log.info("After Sorting In Descending Order: "+ list);   
 	}
 
 }

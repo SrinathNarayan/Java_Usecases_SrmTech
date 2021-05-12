@@ -1,13 +1,21 @@
 package lab1;
 
+
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class ArmstrongNumber {
+
+	static Logger log = Logger.getLogger(ArmstrongNumber.class.getName());
+
 	 public static void main(String[] args) {
 
-	        int number , originalNumber, remainder, result = 0;
+	        int number ; 
+			int originalNumber; 
+			int remainder; 
+			int  result = 0;
 	        Scanner sc =  new Scanner(System.in);
-			System.out.println("Enter a Number :");
+			log.info("Enter a Number :");
 			number= sc.nextInt();
 	        originalNumber = number;
 
@@ -19,9 +27,10 @@ public class ArmstrongNumber {
 	        }
 
 	        if(result == number)
-	            System.out.println(number + " is an Armstrong number.");
+	            log.info(number+ " is an Armstrong number.");
 	        else
-	            System.out.println(number + " is not an Armstrong number.");
-	    }
-
+	            log.info(number+ " is not an Armstrong number.");
+	    
+sc.close();
+		}
 }

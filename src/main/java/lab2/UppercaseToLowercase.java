@@ -1,13 +1,16 @@
 package lab2;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class UppercaseToLowercase {
+    static Logger log = Logger.getLogger(UppercaseToLowercase.class.getName());
 	public static void main(String[] args) {    
+        
         
         String str1;
         Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the string");
+		log.info("Enter the string");
 		str1 = sc.nextLine();
 			
         StringBuffer newStr=new StringBuffer(str1);    
@@ -25,6 +28,7 @@ public class UppercaseToLowercase {
                 newStr.setCharAt(i, Character.toLowerCase(str1.charAt(i)));    
             }    
         }    
-        System.out.println("String after case conversion : " + newStr);    
+        log.info("String after case conversion : " + newStr);    
+        sc.close();
     }    
 }

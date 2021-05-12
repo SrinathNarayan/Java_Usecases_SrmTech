@@ -1,13 +1,15 @@
 package lab1;
 
 import java.util.LinkedList;
+import java.util.logging.Logger;
 
 public class LengthOfLinkedList {
+    static Logger log = Logger.getLogger(LengthOfLinkedList.class.getName());
 	public static void main(String args[])
     {
   
    
-        LinkedList<String> list = new LinkedList<String>();
+        LinkedList<String> list = new LinkedList<>();
   
         
         list.add("Shri");
@@ -17,10 +19,10 @@ public class LengthOfLinkedList {
         list.add("gokul");
   
 
-        System.out.println("LinkedList:" + list);
+       log.info("LinkedList:" + list);
           
        
-        System.out.println("The size of the linked list is: " 
+       log.info("The size of the linked list is: " 
                                                 + list.size());
     }
 

@@ -3,38 +3,40 @@ package AbcFruitShop;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 public class Fruitshop {
+	static Logger log = Logger.getLogger(Fruitshop.class.getName());
 	public void fruits(){
 	
-	List<FruitsInfo> fd = new ArrayList<FruitsInfo>();	
+	List<FruitsInfo> fd = new ArrayList<>();	
 	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter the no.of.Fruits Records : ");
+	log.info("Enter the no.of.Fruits Records : ");
 	int n=sc.nextInt();
 	for (int i=0;i<n;i++) {
 		
-		System.out.println("Enter the Fruit Name:");
+		log.info("Enter the Fruit Name:");
 		
 		String fruitName= sc.next();
-		System.out.println("Enter the Fruit Type:");
+		log.info("Enter the Fruit Type:");
 		String fruitType= sc.next();
-		System.out.println("Enter the Fruit Weight[In Numbers]:");
+		log.info("Enter the Fruit Weight[In Numbers]:");
 		double fruitWeightr= sc.nextDouble();
-		System.out.println("Enter the Distributor Name:");
-		String Distributor= sc.next();
-		System.out.println("Enter the Fruit Category:");
+		log.info("Enter the Distributor Name:");
+		String distributor= sc.next();
+		log.info("Enter the Fruit Category:");
 		String fruitcategory= sc.next();
-		System.out.println("Enter Your Location:");
+		log.info("Enter Your Location:");
 		String location= sc.next();
-		System.out.println("Enter the ExpiryDate:[Must Be Date]");
+		log.info("Enter the ExpiryDate:[Must Be Date]");
 		String expiryDate= sc.next();
-		System.out.println("Enter the Quantity:");
+		log.info("Enter the Quantity:");
 		int quantity= sc.nextInt();
-		System.out.println("Enter the Cost:[In Numbers]");
+		log.info("Enter the Cost:[In Numbers]");
 		double cost= sc.nextDouble();
 		
-		fd.add(new FruitsInfo(fruitName, fruitType,  Distributor,fruitWeightr, fruitcategory, location, expiryDate, quantity, cost,quantity*cost));
+		fd.add(new FruitsInfo(fruitName, fruitType,  distributor,fruitWeightr, fruitcategory, location, expiryDate, quantity, cost,quantity*cost));
 	}
 	
 	FruitsOperation fo=new FruitsOperation();
@@ -42,6 +44,7 @@ public class Fruitshop {
 	fo.findByDis((ArrayList<FruitsInfo>)fd,"Ram");
 	fo.findByName((ArrayList<FruitsInfo>)fd,"mango");
 	fo.findByloc((ArrayList<FruitsInfo>)fd,"Pune");
+	sc.close();
 	}
 }
 

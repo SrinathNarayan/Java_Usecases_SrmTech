@@ -1,67 +1,73 @@
 package SalesReport;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 public class Emart {
+	static Logger log = Logger.getLogger(Emart.class.getName());
 	public static void main(String[] args) {
 
-		System.out.println("\t\t\t\t\tEmart Super Market");
-		System.out.println(	"\t\t\t\t\t    Since 1978");
-		System.out.println("-----------------------------------------------------------------------------------------------------------------");
-		System.out.println("\t\t\t\t\tChoose your Catogory:");
-		int i,J = 0,k = 0, h=0;
-		System.out.println("\t\t\t\t\t    1.Bevrages \n \t\t\t\t\t    2.Vegetables \n \t\t\t\t\t    3.Foodgrains");
-		System.out.println("-----------------------------------------------------------------------------------------------------------------");
+		log.info("\t\t\t\t\tEmart Super Market");
+		log.info(	"\t\t\t\t\t    Since 1978");
+		log.info("-----------------------------------------------------------------------------------------------------------------");
+		log.info("\t\t\t\t\tChoose your Catogory:");
+		int i;
+		int j = 0;
+		int k = 0;
+		int  h=0;
+		log.info("\t\t\t\t\t    1.Bevrages \n \t\t\t\t\t    2.Vegetables \n \t\t\t\t\t    3.Foodgrains");
+		log.info("-----------------------------------------------------------------------------------------------------------------");
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\t\t\t\t\t  Enter your option");
+		log.info("\t\t\t\t\t  Enter your option");
 		 i=sc.nextInt();
-		System.out.println("==================================================================================================================");
+		log.info("==================================================================================================================");
 		Catogories types= new Catogories();
 		if(i==1) {
-			types.Beverages();
-			System.out.println("\t\t\t\t\tChoose your Product:");
-			 J=sc.nextInt();
-			 Products Aproduct = new Products();
-			if(J==1) {
-				Aproduct.Beveragecocoorder();
+			types.beverages();
+			log.info("\t\t\t\t\tChoose your Product:");
+			 j=sc.nextInt();
+			 Products product = new Products();
+			if(j==1) {
+				product.beveragecocoorder();
 				}
-				if(J==2) {
-					Aproduct. Beveragepepsiorder();
+				if(j==2) {
+					product. beveragepepsiorder();
 				}
 			}
 		if(i==2) {
-			types.Vegetables();
-			System.out.println("\t\t\t\t\tChoose your Product:");
+			types.vegetables();
+			log.info("\t\t\t\t\tChoose your Product:");
 		   k=sc.nextInt();
-		   Products Aproduct = new Products();
+		   Products aproduct = new Products();
 			if(k==1) {
-				Aproduct.VegetablesTomatoProducts();
+				aproduct.vegetablesTomatoProducts();
 				}
 				if(k==2) {
-					Aproduct. VegetablesPotatoProducts();
+					aproduct. vegetablesPotatoProducts();
 				}
+				
 				
 			}
 		if(i==3) {
-			types.Foodgrains();
-			System.out.println("\t\t\t\t\tChoose your Product:");
+			types.foodgrains();
+			log.info("\t\t\t\t\t Choose your Product:");
 		   h=sc.nextInt();
-		   Products Aproduct = new Products();
+		   Products aproduct = new Products();
 			if(h==1) {
-				Aproduct.FoodGrainAttaProducts();
+				aproduct.foodGrainAttaProducts();
 				}
 				if(h==2) {
-					Aproduct. FoodGrainsRiceProducts();
+					aproduct. foodGrainsRiceProducts();
 				}
 				
 			}
-		System.out.println("\n------------------------------------------\n");
-		System.out.println("Willing to Place the order (Yes/No):");
+		log.info("\n------------------------------------------\n");
+		log.info("Willing to Place the order (Yes/No):");
 		
-	    String a=sc.next();
-        if(i== 1 && J == 1) {
+	   
+        if(i== 1 && j == 1) {
         	FinalPayment pay = new FinalPayment();
       pay.cocolapay();
-        } else if (i== 1 && J == 2) {
+        } else if (i== 1 && j == 2) {
     	  FinalPayment pay = new FinalPayment();
   	     pay.pepsipay();
         }
@@ -81,7 +87,7 @@ public class Emart {
   		  				FinalPayment pay = new FinalPayment();
   		  			     pay.attapay();
   		  			}
-  	     
+  	     sc.close();
   	}
        
 } 

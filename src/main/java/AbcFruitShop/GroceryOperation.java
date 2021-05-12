@@ -2,40 +2,42 @@ package AbcFruitShop;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.logging.Logger;
 
 
 public class GroceryOperation {
-	void getDetails(ArrayList al )
+	static Logger log = Logger.getLogger(GroceryOperation.class.getName());
+	void getDetails(ArrayList<GroceryInfo> al )
 	{
 		for(int i=0;i<al.size();i++)
 		{
-			System.out.println(al.get(i));
+			log.fine( "" + al.get(i));
 		}
 	}
-	void sortByDistAndGroceryType(ArrayList al)
+	void sortByDistAndGroceryType(ArrayList<GroceryInfo> al)
 	{
 		Collections.sort(al,new SortByDistAndGrocType());
 		for(int i=0;i<al.size();i++)
 		{
-			System.out.println(al.get(i));
+			log.fine( "" + al.get(i));
 		}
 	}
-	void SortByCostAndExpiry(ArrayList al)
+	void SortByCostAndExpiry(ArrayList<GroceryInfo> al)
 	{
 		Collections.sort(al,new SortByCostAndExpiry());
 		for(int i=0;i<al.size();i++)
 		{
-			System.out.println(al.get(i));
+			log.fine( "" +al.get(i));
 		}
 	}
 	void findByDis(ArrayList<GroceryInfo> al,String distName)
 	{
-		System.out.println("Searched By Name");
+	log.info("Searched By Name");
 		for(GroceryInfo g:al)
 		{
-			if(g.Distributor.equals(distName))
+			if(g.distributor.equals(distName))
 			{
-				System.out.println(g);
+				log.fine( "" +g);
 			}
 		}
 	}

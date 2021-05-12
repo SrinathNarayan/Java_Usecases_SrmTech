@@ -1,12 +1,14 @@
 package lab1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class SecondLargest {
+	static Logger log = Logger.getLogger(SecondLargest.class.getName());
 	public static void main(String[] args) {
 		int arr[] = new int[5];
 		Scanner  sc = new Scanner ( System.in);
-		System.out.println(" Enter the list of numbers:");
+		log.info(" Enter the list of numbers:");
 		int largest = arr[0]; 
 		int secondLargest = arr[0];
 	
@@ -25,8 +27,8 @@ public class SecondLargest {
 			}
 		}
  
-		System.out.println("\nSecond largest number is:" + secondLargest);
- 
+		log.info("\nSecond largest number is:" + secondLargest);
+		sc.close();
 
 	}
 

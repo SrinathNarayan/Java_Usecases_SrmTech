@@ -2,23 +2,25 @@
 package AirProcess;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 public class AirProcess {
+	static Logger log = Logger.getLogger(AirProcess.class.getName());
 	public static void main(String[] args) {
 
-		System.out.println("\t\t\t\t\t Aircel AirProcess Services");
-		System.out.println("-----------------------------------------------------------------------------------------------------------------");
-		System.out.println("\t\t\t\t\t    Choose your Services:");
-		System.out.println("\t\t\t\t        =============================");
+		log.info("\t\t\t\t\t Aircel AirProcess Services");
+		log.info("-----------------------------------------------------------------------------------------------------------------");
+		log.info("\t\t\t\t\t    Choose your Services:");
+		log.info("\t\t\t\t        =============================");
 		int i;
-		System.out.println("\t\t\t\t\t 1.View Compelete History   \n \t\t\t\t\t 2.Search Particular Customer History");
-		System.out.println("-----------------------------------------------------------------------------------------------------------------");
+		log.info("\t\t\t\t\t 1.View Compelete History   \n \t\t\t\t\t 2.Search Particular Customer History");
+		log.info("-----------------------------------------------------------------------------------------------------------------");
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\t\t\t\t\t    Select Your Service");
-		System.out.println("\t\t\t\t       =============================");
+		log.info("\t\t\t\t\t    Select Your Service");
+		log.info("\t\t\t\t       =============================");
 		 i=sc.nextInt();
-		System.out.println("==================================================================================================================");
+		log.info("==================================================================================================================");
 		Services types= new Services();
 		if(i==1) {
 			
@@ -28,5 +30,6 @@ public class AirProcess {
 			types.searchfilter() ;
 			
 			}
+			sc.close();
 }
 }

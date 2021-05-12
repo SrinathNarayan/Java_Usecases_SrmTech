@@ -2,12 +2,14 @@ package lab2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.logging.Logger;
 
 public class ReverseArrayList {
+    static Logger log = Logger.getLogger(ReverseArrayList.class.getName());
 	public static void main(String[] args) 
     {
               
-        ArrayList<String> arrlist = new ArrayList<String>(); 
+        ArrayList<String> arrlist = new ArrayList<>(); 
  
          
         arrlist.add("JAVA");         
@@ -18,14 +20,14 @@ public class ReverseArrayList {
         arrlist.add("HTML");
                  
                 
-        System.out.println("Before Reverse ArrayList:");         
-        System.out.println(arrlist);
+       log.info("Before Reverse ArrayList:");         
+       log.info( ""+arrlist);
          
               
         Collections.reverse(arrlist);
          
              
-        System.out.println("After Reverse ArrayList:");         
-        System.out.println(arrlist);
+       log.info("After Reverse ArrayList:");         
+       log.info("" +arrlist);
     }
 }

@@ -10,7 +10,7 @@ public class FileManager {
 		
 		log.info("Create the File");
 		new FileImpelmentation();
-        FileImpelmentation.CreateNewFile();
+        FileImpelmentation.createNewFile();
 		
 		
 		log.info("It Will Display All Records");

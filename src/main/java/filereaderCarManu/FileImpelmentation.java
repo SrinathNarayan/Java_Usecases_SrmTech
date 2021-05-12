@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 public class FileImpelmentation extends MyFileReader {
 	static Logger log = Logger.getLogger(FileImpelmentation.class.getName());
     static String txt="";
-	static void CreateNewFile()
+	static void createNewFile()
 	{
 		try {
 		      File myObj = new File("file.txt");
@@ -40,7 +40,7 @@ public class FileImpelmentation extends MyFileReader {
 	public static List<String> readFileIntoList() 
 	{ 
 		BufferedReader bufReader;
-		ArrayList<String> listOfLines = new ArrayList<String>(); 
+		ArrayList<String> listOfLines = new ArrayList<>(); 
 		try {
 			File file = new File("file.txt");
 			Reader read = new FileReader(file);
@@ -67,7 +67,7 @@ public class FileImpelmentation extends MyFileReader {
 		    }
 		return listOfLines;	
 	}
-	public static void ConvertTxtToCsv() throws IOException
+	public static void convertTxtToCsv() throws IOException
 	{
 		String[] val =txt.split(".");
 	    final Path path = Paths.get("path", "to", "folder");
@@ -106,7 +106,7 @@ public class FileImpelmentation extends MyFileReader {
 	}
 	public void display() throws IOException
 	{
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<String> list = new ArrayList<>();
 		int count=0;
 		list.addAll(readFileIntoList());
 		if(list.isEmpty())
@@ -121,7 +121,7 @@ public class FileImpelmentation extends MyFileReader {
 				count++;
 			}
 			log.fine(""+count);
-			ConvertTxtToCsv();
+			convertTxtToCsv();
 		}
 		
 		
